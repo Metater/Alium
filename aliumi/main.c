@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio.h>
 
 #include "common.h"
 #include "chunk.h"
@@ -13,6 +14,8 @@ int main(int argc, const char* argv[]) {
 	writeChunk(&chunk, constant, 123);
 
 	writeChunk(&chunk, OP_RETURN, 123);
+
+	printf("DAS%d\n", chunk.lineInfo.count);
 
 	disassembleChunk(&chunk, "test chunk");
 	freeChunk(&chunk);

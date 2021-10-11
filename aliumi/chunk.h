@@ -30,6 +30,7 @@ void freeChunk(Chunk* chunk);
 void writeChunk(Chunk* chunk, uint8_t byte, int line);
 int addConstant(Chunk* chunk, Value value);
 
+void addLine(Chunk* chunk, int line);
 int getLine(Chunk* chunk, int offset);
 
 #endif
