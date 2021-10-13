@@ -18,10 +18,10 @@ typedef enum {
 	RUN_RUNTIME_ERROR
 } RunResult;
 
-void initVM();
-void freeVM();
-RunResult run(Chunk* chunk);
-void push(Value value);
-Value pop();
+void initVM(VM* vm);
+void freeVM(VM* vm);
+RunResult run(VM* vm, Chunk* chunk);
+void push(VM* vm, Value value);
+Value pop(VM* vm);
 
 #endif
